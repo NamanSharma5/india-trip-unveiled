@@ -5,7 +5,7 @@ interface MusicPlayerProps {
   audioSrc?: string;
 }
 
-const MusicPlayer = ({ audioSrc = '/music.mp3' }: MusicPlayerProps) => {
+const MusicPlayer = ({ audioSrc = '/TuHiHaqeeqat.mp3' }: MusicPlayerProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
