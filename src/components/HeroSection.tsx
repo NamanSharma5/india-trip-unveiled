@@ -36,21 +36,21 @@ const HeroSection = ({
       {/* Content */}
       <div className="relative z-10 text-center px-6">
         <p className="font-sans text-cream/80 text-sm md:text-base tracking-[0.3em] uppercase mb-4 animate-fade-up">
-          You're invited to
+          Naman and the Sharma family invite you to
         </p>
-        <h1 
+        <h1
           className="font-display text-7xl md:text-9xl lg:text-[10rem] text-cream font-bold mb-6 leading-none animate-fade-up"
           style={{ animationDelay: '150ms' }}
         >
           {title}
         </h1>
-        <p 
+        <p
           className="font-display text-2xl md:text-3xl text-cream/90 italic mb-12 animate-fade-up"
           style={{ animationDelay: '300ms' }}
         >
           {subtitle}
         </p>
-        <div 
+        <div
           className="animate-fade-up"
           style={{ animationDelay: '450ms' }}
         >

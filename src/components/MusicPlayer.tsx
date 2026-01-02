@@ -59,7 +59,8 @@ const MusicPlayer = ({ audioSrc = '/music.mp3' }: MusicPlayerProps) => {
         className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-primary text-primary-foreground font-sans font-medium text-sm tracking-wide animate-pulse-glow transition-all duration-300 hover:scale-105"
       >
         <Volume2 className="w-5 h-5" />
-        <span>Tap to start music</span>
+        <span>Teleport me!
+        </span>
       </button>
     </>
   );
