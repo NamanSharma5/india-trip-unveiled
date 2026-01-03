@@ -4,8 +4,8 @@ interface FooterSectionProps {
   message?: string;
 }
 
-const FooterSection = ({ 
-  message = "Can't wait to explore India with you!" 
+const FooterSection = ({
+  message = "Early November - Are you ready?"
 }: FooterSectionProps) => {
   return (
     <section className="relative min-h-[60vh] w-full flex items-center justify-center bg-foreground overflow-hidden">
@@ -23,7 +23,7 @@ const FooterSection = ({
           {message}
         </h2>
         <p className="font-sans text-cream/60 text-sm tracking-widest uppercase">
-          See you soon
+     Can't wait to explore India with you!
         </p>
       </div>
     </section>

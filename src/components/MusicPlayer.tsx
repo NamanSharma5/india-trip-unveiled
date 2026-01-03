@@ -3,9 +3,14 @@ import { Volume2, VolumeX } from 'lucide-react';
 
 interface MusicPlayerProps {
   audioSrc?: string;
+  onStart?: () => void;
 }
 
-const MusicPlayer = ({ audioSrc = '/TuHiHaqeeqat.mp3' }: MusicPlayerProps) => {
+// const MusicPlayer = ({ audioSrc = '/Singham.mp3' }: MusicPlayerProps) => {
+const MusicPlayer = ({
+  audioSrc = '/Singham.mp3',
+  onStart,
+}: MusicPlayerProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -19,6 +24,9 @@ const MusicPlayer = ({ audioSrc = '/TuHiHaqeeqat.mp3' }: MusicPlayerProps) => {
           // Audio play failed, likely no audio file yet
           console.log('Audio file not found or cannot play');
         });
+      }
+      if (!hasStarted) {
+        onStart?.();
       }
       setIsPlaying(!isPlaying);
       setHasStarted(true);

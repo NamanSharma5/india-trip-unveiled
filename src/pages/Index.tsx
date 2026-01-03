@@ -6,7 +6,7 @@ const destinations = [
   {
     title: "Delhi",
     subtitle: "The Gateway",
-    description: "We begin in India's vibrant capital. Together we explore the historic Red Fort, wander through bustling streets, and smell incredible street food.",
+    description: "We begin in India's vibrant capital - we'll explore the historic Red Fort, wander through bustling streets, smell incredible street food, and much more ...",
     dates: "Day 1–2",
     imageSrc: "redFortAnimated.jpg",
   },
@@ -20,14 +20,14 @@ const destinations = [
   {
     title: "Jaipur",
     subtitle: "The Pink City",
-    description: "Get ready for stunning palaces, vibrant bazaars, and incredible Rajasthani cuisine. Amber Fort, Hawa Mahal, and the City Palace await us.",
+    description: "Get ready for stunning palaces, vibrant bazaars, and incredible Rajasthani cuisine.Hawa Mahal, Amber Fort,  and the City Palace await us.",
     dates: "Day 5–6",
     imageSrc: "https://images.unsplash.com/photo-1477587458883-47145ed94245?w=1920&q=80",
   },
   {
-    title: "Jabaplur",
+    title: "Jabalpur",
     subtitle: "My mum's hometown",
-    description: "Relax in rural India, sleep under the stars on the family farm and refresh in the serene ghats along the Ganges.",
+    description: "Relax in rural India, sleep under the stars on the family farm (pictured) and refresh in the serene ghats along the Narmada.",
     dates: "Day 7-8",
     imageSrc: "jabalpur.jpg",
   }
@@ -38,7 +38,7 @@ const Index = () => {
     <main className="bg-background">
       <HeroSection
         title="India"
-        subtitle="An adventure awaits"
+        subtitle="The adventure awaits"
         // backgroundImage="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1920&q=80"
         backgroundImage="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=1920&q=80"
       />
@@ -51,7 +51,7 @@ const Index = () => {
         />
       ))}
 
-      <FooterSection message="Can't wait to explore India with you!" />
+      <FooterSection message="Early November - Are you ready?" />
     </main>
   );
 };

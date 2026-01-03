@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import MusicPlayer from './MusicPlayer';
 
 interface HeroSectionProps {
@@ -8,9 +9,12 @@ interface HeroSectionProps {
 
 const HeroSection = ({
   title = "India",
-  subtitle = "An adventure awaits",
+  subtitle = "The adventure awaits",
   backgroundImage,
 }: HeroSectionProps) => {
+  const [showScrollHint, setShowScrollHint] = useState(false);
+  const scrollHintDelayMs = 3000;
+
   return (
     <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden">
       {/* Background */}
@@ -54,22 +58,28 @@ const HeroSection = ({
           className="animate-fade-up"
           style={{ animationDelay: '450ms' }}
         >
-          <MusicPlayer />
+          <MusicPlayer
+            onStart={() => {
+              setTimeout(() => setShowScrollHint(true), scrollHintDelayMs);
+            }}
+          />
         </div>
       </div>
 
       {/* Scroll hint */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3">
-        <div className="flex flex-col items-center gap-2 text-cream/60">
-          <span className="font-sans text-xs tracking-widest uppercase">Scroll to explore</span>
-          <div className="w-px h-8 bg-gradient-to-b from-cream/60 to-transparent animate-pulse" />
-        </div>
-        <div className="animate-bounce">
-          <div className="w-6 h-10 rounded-full border-2 border-cream/50 flex items-start justify-center p-2">
-            <div className="w-1.5 h-2.5 bg-cream/70 rounded-full animate-pulse" />
+      {showScrollHint && (
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3 animate-fade-in">
+          <div className="flex flex-col items-center gap-2 text-cream/60">
+            <span className="font-sans text-xs tracking-widest uppercase">Scroll to explore</span>
+            <div className="w-px h-8 bg-gradient-to-b from-cream/60 to-transparent animate-pulse" />
+          </div>
+          <div className="animate-bounce">
+            <div className="w-6 h-10 rounded-full border-2 border-cream/50 flex items-start justify-center p-2">
+              <div className="w-1.5 h-2.5 bg-cream/70 rounded-full animate-pulse" />
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </section>
   );
 };
